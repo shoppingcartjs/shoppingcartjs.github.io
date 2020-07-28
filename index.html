@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>The Generics | Store</title>
+        <meta name="description" content="This is the description">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+   
+       <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+       <meta name="HandheldFriendly" content="true">
+       <link rel="stylesheet" href="css/bootstrap.min.css">
+       <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+
+       <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+        <link href="https://fonts.googleapis.com/css?family=Oswald|Poppins&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/style.css"/>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+<!-- JS, Popper.js, and jQuery -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+
+        <script src="store.js" async></script>
+
+    </head>
+    <body>
+        <nav class="navbar navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Shopping Cart</a>
+            <button class="navbar-toggler collapsed" id="navbarButton"  type="button" data-toggle="collapse" data-target="#navbarsExample01" aria-controls="navbarsExample01" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="navbar-collapse collapse" id="navbarsExample01"  >
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item active">
+                  <a class="nav-link" href="#">Partners</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="#">News</a>
+                  </li>
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#">Contact Us</a>
+                  </li>
+    
+            </ul>
+
+        </div>
+
+          </nav>
+
+
+
+<section class="TVSection">
+    <span class="TVSection-span"> TVs </span>
+    <i class="fa fa-angle-double-right" aria-hidden="true" id="TVI">  </i>
+</section>
+
+<section class="shoppingcartItems"> 
+<div class="container"  id="itemsSectionOne">
+    <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+        <div class="shop-item" id="alignedItemLeft">
+            <section class="shop-item-image"> 
+            <img src="pictures/TV1.jpg">
+        </section> 
+
+            <h3 class="shop-item-title">Samsung UHD Smart TV</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$2498</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-item" id="shopItemTwo">
+        <section class="shop-item-image"> 
+    <img src="pictures/TV2.jpg">
+</section>
+
+    <h3 class="shop-item-title" id="itemTwo">TOSHIBA LED TV </h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$159</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+</div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+        <div class="shop-item" id="alignedItemRight">
+                <section class="shop-item-image"> 
+                    <img src="pictures/TV3.jpg">
+                </section>
+
+                    <h3 class="shop-item-title" id="itemThree">32 LM55 Series HD TV  </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$220</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="container" id="itemsSectionTwo">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item" id="alignedItemLeft">
+            <img class="shop-item-image" src="pictures/TV4.jpg">
+            <h3 class="shop-item-title">   eAirtec 81 cm</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$750</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-item" id="shopItemTwo">
+    <img class="shop-item-image" src="pictures/TV5.jpg">
+    <h3 class="shop-item-title" id="itemTwo">   HKC 32F1D 32 inch</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$816</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+        <div class="shop-item" id="alignedItemRight">
+                <img class="shop-item-image" src="pictures/TV6.jpg">
+                <h3 class="shop-item-title" id="itemThree"> Akai 32-inch HD LED LCD</h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$1100</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+
+
+<!-- fashion section -->
+<section class="fashionSection">
+    <span class="fashionSection-span"> Fashion </span>
+    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+
+    
+
+</section>
+<div class="container"  id="itemsSectionOne-fashion">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item"  id="alignedItemLeft">
+            <section class="shop-item-image"> 
+            <img src="pictures/fashion1.jpg">
+        </section> 
+
+            <h3 class="shop-item-title"> GANNOU Air Athletic</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$35</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-item" id="shopItemTwo">
+        <section class="shop-item-image"> 
+    <img src="pictures/fashion2.jpg">
+</section>
+
+    <h3 class="shop-item-title" id="itemTwo">   Megir Luxury Watch</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$62</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+
+        <div class="shop-item" id="alignedItemRight">
+                <section class="shop-item-image"> 
+                    <img src="pictures/fashion3.jpg">
+                </section>
+
+                    <h3 class="shop-item-title" id="itemThree"> Sport Sneakers For Men  </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$38</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+<div class="container" id="itemsSectionTwo">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item"  id="alignedItemLeft">
+            <img class="shop-item-image" src="pictures/fashion4.jpg">
+            <h3 class="shop-item-title">   Silicone Bracelet Strap </h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$12.99</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-item" id="shopItemTwo">
+    <img class="shop-item-image" src="pictures/fashion5.jpg">
+    <h3 class="shop-item-title" id="itemTwo">  REEBOK  LINEAR T-SHIRT</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$38</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="shop-items">
+        <div class="shop-item" id="alignedItemRight"> 
+                <img class="shop-item-image" src="pictures/fashion6.jpg">
+                <h3 class="shop-item-title" id="itemThree"> Men Ski Gloves</h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+<!-- appliances secton-->
+
+
+<section class="appliancesSection">
+    <span class="appliancesSection-span"> Appliances </span>
+    <i class="fa fa-angle-double-right" aria-hidden="true"></i>
+
+    
+
+</section>
+<div class="container"  id="itemsSectionOne-Appliances">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item"  id="alignedItemLeft">
+            <section class="shop-item-image"> 
+            <img src="pictures/appliances1.jpg">
+        </section> 
+
+            <h3 class="shop-item-title">Xiaomi Qcooker Qf1201</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$83</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <!--
+    <div class="shop-items">
+         -->
+    <div class="shop-item" id="shopItemTwo">
+        <section class="shop-item-image"> 
+    <img src="pictures/appliances2.jpg">
+</section>
+
+    <h3 class="shop-item-title" id="itemTwo">Tornado TM-20MW  </h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$63.99</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="shop-items">
+        <div class="shop-item" id="alignedItemRight">
+                <section class="shop-item-image"> 
+                    <img src="pictures/appliances3.jpg">
+                </section>
+
+                    <h3 class="shop-item-title" id="itemThree"> LOW-OIL FRYER  </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$74</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+</div>
+
+</div>
+
+
+
+<div class="container" id="itemsSectionTwo">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item"  id="alignedItemLeft">
+            <img class="shop-item-image" src="pictures/appliances4.jpg">
+            <h3 class="shop-item-title">  Washing Machine</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$111.99</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-item" id="shopItemTwo">
+    <img class="shop-item-image" src="pictures/appliances5.jpg">
+    <h3 class="shop-item-title" id="itemTwo"> Braun Food Processor</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$50</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="shop-items">
+        <div class="shop-item" id="alignedItemRight">
+                <img class="shop-item-image" src="pictures/appliances6.jpg">
+                <h3 class="shop-item-title" id="itemThree"> Tornado Hand Blender </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$65</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+                                    <!-- shoppingCart- mobile -->
+
+    <section class="shoppingcartItems-phone"> 
+        <section class="TVSection-phone">
+            <span class="TVSection-span-phone"> TVs </span>
+            <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+        
+            
+        
+        </section>
+        
+<div class="container"  id="itemsSectionOne">
+    <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+        <div class="shop-item">
+            <section class="shop-item-image"> 
+            <img src="pictures/TV1.jpg">
+        </section> 
+
+            <h3 class="shop-item-title">Samsung UHD Smart TV</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$2498</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+    <div class="shop-item" id="rightAligned">
+        <section class="shop-item-image"> 
+    <img src="pictures/TV2.jpg">
+</section>
+
+    <h3 class="shop-item-title" id="itemTwo">TOSHIBA LED TV </h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$159</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="container" id="itemsPhone">
+    <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+        <div class="shop-item">
+                <section class="shop-item-image"> 
+                    <img src="pictures/TV3.jpg">
+                </section>
+
+                    <h3 class="shop-item-title" id="itemThree">32 LM55 Series HD TV  </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$220</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item" id="rightAligned">
+            <img class="shop-item-image" src="pictures/TV4.jpg">
+            <h3 class="shop-item-title">   eAirtec 81 cm</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$750</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+
+</div> 
+</div>
+</div>
+
+<div class="container" id="itemsPhone"> 
+    <div class="row">
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+
+    <div class="shop-item" id="shopItemTwo">
+    <img class="shop-item-image" src="pictures/TV5.jpg">
+    <h3 class="shop-item-title" id="itemTwo">   HKC 32F1D 32 inch</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$816</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+</div>
+
+
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+        <div class="shop-item" id="rightAligned">
+                <img class="shop-item-image" src="pictures/TV6.jpg">
+                <h3 class="shop-item-title" id="itemThree"> Akai 32-inch HD LED LCD</h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$1100</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+
+</section>
+
+<!-- fashion section-phone -->
+<section class="fashionSection-phone">
+    <span class="fashionSection-span-phone"> Fashion </span>
+    <i class="fa fa-angle-double-left" aria-hidden="true"></i>
+
+    
+
+</section>
+<div class="container" id="itemsPhone">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item">
+            <section class="shop-item-image"> 
+            <img src="pictures/fashion1.jpg">
+        </section> 
+
+            <h3 class="shop-item-title"> GANNOU Air Athletic</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$35</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+    <div class="shop-item" id="rightAligned">
+        <section class="shop-item-image"> 
+    <img src="pictures/fashion2.jpg">
+</section>
+
+    <h3 class="shop-item-title" id="itemTwo">   Megir Luxury Watch</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$62</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+</div>
+
+
+<div class="container" id="itemsPhone">
+    <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+
+        <div class="shop-item">
+                <section class="shop-item-image"> 
+                    <img src="pictures/fashion3.jpg">
+                </section>
+
+                    <h3 class="shop-item-title" id="itemThree"> Sport Sneakers For Men  </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$38</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item" id="rightAligned">
+            <img class="shop-item-image" src="pictures/fashion4.jpg">
+            <h3 class="shop-item-title">   Silicone Bracelet Strap </h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$12.99</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+</div> 
+</div> 
+
+
+<div class="container" id="itemsPhone">
+    <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+    <div class="shop-item">
+    <img class="shop-item-image" src="pictures/fashion5.jpg">
+    <h3 class="shop-item-title" id="itemTwo">  REEBOK  LINEAR T-SHIRT</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$38</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+</div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="shop-items">
+        <div class="shop-item" id="rightAligned">
+                <img class="shop-item-image" src="pictures/fashion6.jpg">
+                <h3 class="shop-item-title" id="itemThree"> Men Ski Gloves</h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$9.99</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+</section>
+
+<!-- appliances secton-->
+
+
+<section class="appliancesSection-phone">
+    <span class="appliancesSection-span-phone"> Appliances </span>
+    <i class="fa fa-angle-double-right" aria-hidden="true" id="appliancesI"></i>
+
+    
+
+</section>
+<div class="container" id="itemsPhone">
+    <div class="row">
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item">
+            <section class="shop-item-image"> 
+            <img src="pictures/appliances1.jpg">
+        </section> 
+
+            <h3 class="shop-item-title">Xiaomi Qcooker Qf1201</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$83</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+ 
+         <div class="shop-items">
+
+    <div class="shop-item" id="rightAligned" >
+        <section class="shop-item-image"> 
+    <img src="pictures/appliances2.jpg">
+</section>
+
+    <h3 class="shop-item-title" id="itemTwo">Tornado TM-20MW  </h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$63.99</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+    </div>
+</div>
+</div>
+</div>
+
+
+
+<div class="container" id="itemsPhone">
+    <div class="row">
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="shop-items">
+        <div class="shop-item">
+                <section class="shop-item-image"> 
+                    <img src="pictures/appliances3.jpg">
+                </section>
+
+                    <h3 class="shop-item-title" id="itemThree"> LOW-OIL FRYER  </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$74</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+
+                </div>
+
+        </div>
+
+    </div>
+
+
+        <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <div class="shop-items">
+        <div class="shop-item" id="rightAligned">
+            <img class="shop-item-image" src="pictures/appliances4.jpg">
+            <h3 class="shop-item-title">  Washing Machine</h3>
+            <div class="shop-item-details">
+                <span class="shop-item-price">$111.99</span>
+                <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+            </div>
+        </div>
+
+</div> 
+</div> 
+</div> 
+</div> 
+
+
+<div class="container" id="itemsPhone">
+    <div class="row">
+<div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+    <div class="shop-items">
+    <div class="shop-item" >
+    <img class="shop-item-image" src="pictures/appliances5.jpg">
+    <h3 class="shop-item-title" id="itemTwo"> Braun Food Processor</h3>
+    <div class="shop-item-details">
+        <span class="shop-item-price">$50</span>
+        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+    </div>
+</div>
+</div>
+</div>
+
+    <div class="col-lg-4 col-md-6 col-sm-12 col-xs-12">
+        <div class="shop-items">
+        <div class="shop-item" id="rightAligned">
+                <img class="shop-item-image" src="pictures/appliances6.jpg">
+                <h3 class="shop-item-title" id="itemThree"> Tornado Hand Blender </h3>
+                    <div class="shop-item-details">
+                        <span class="shop-item-price">$65</span>
+                        <button class="btn btn-primary shop-item-button" id="shopItemButton" type="button">ADD TO CART</button>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+</div>
+
+</section>
+
+
+
+
+
+
+        <section class="container content-section" id="cart">
+            <h2 class="section-header">Cart Items</h2>
+            <div class="cart-row">
+             
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column" id="itemsPrice">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+            </div>
+
+
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">$0</span>
+            </div>
+            <button class="btn btn-primary btn-purchase" type="button" id="purchaseBtn">PURCHASE</button>
+        </section>
+
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue" id="footer">
+
+    <!-- Copyright -->
+    <div class="footer-copyright text-center py-3" id="footerText"> Copyright © 2020 
+      <a href="#"> ShoppingCart</a>
+    </div>
+    <!-- Copyright -->
+  
+  </footer>
+  <!-- Footer -->
+
+
+
+    </body>
+</html>
